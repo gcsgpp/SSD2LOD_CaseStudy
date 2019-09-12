@@ -1,0 +1,20 @@
+config_element {
+	"default_baseIRI" = "http://dcm.ffclrp.usp.br/lssb/onto/individual/",
+	"export_syntax" = "N-Triples",
+	"namespace" = "ro" refers_to "http://purl.obolibrary.org/obo/RO",
+	"namespace" = "uniprot" refers_to "http://purl.uniprot.org/core/",
+	"namespace" = "go" refers_to "http://purl.obolibrary.org/obo/GO",
+}
+
+row_based_rule differentiallyExpressedGene ["gene_id.Set1" is_equivalent_to "uniprot:Gene"]{
+	links_to "GO BP.Set1" /SP("; ") /NODE("go:biological_process") /SE(searchBP, ?bpIRI) using "ro:participates in"
+}
+
+search_element searchBP["http://rdf.geneontology.org/blazegraph/namespace/kb/sparql"]{$
+	PREFIX obo: <http://www.geneontology.org/formats/oboInOwl#>
+	SELECT DISTINCT ?bpIRI WHERE{
+		?bpIRI obo:id ?id .
+		BIND(str(?id) as ?idString).
+		VALUES ?idString { ?tsvData }
+	}
+$}

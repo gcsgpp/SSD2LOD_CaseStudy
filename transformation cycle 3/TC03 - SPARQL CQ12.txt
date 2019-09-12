@@ -1,0 +1,37 @@
+PREFIX onto: 	<http://example.org/onto/exp5412#>
+PREFIX obo: 	<http://purl.obolibrary.org/obo/>
+PREFIX uniprot:    <http://purl.uniprot.org/core/>
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dc: 		<http://purl.org/dc/terms/>
+PREFIX dcterms: <http://purl.org/dc/elements/1.1/>
+PREFIX wp: 		<http://vocabularies.wikipathways.org/wp#>
+
+SELECT DISTINCT ?pathway_label
+				?pathway 
+				?genes_count
+				(count(?geneProduct) as ?genes_known)
+				((?genes_count / ?genes_known) as ?ratio) WHERE {
+
+	{
+		SELECT DISTINCT ?pathway (count(?gene_label) as ?genes_count) WHERE{
+		
+			?genes_iri a uniprot:Gene.
+			?genes_iri rdfs:label ?gene_label .
+			
+			?genes_iri obo:RO_0002331 ?pathway
+		} GROUP BY ?pathway order by desc(?genes_count)
+
+	}
+
+	SERVICE <http://sparql.wikipathways.org/> { 
+		
+		?geneProduct a wp:GeneProduct .
+		?geneProduct dc:isPartOf ?pathway .
+		
+		
+		?pathway dcterms:title ?pathway_label_with_lang .
+		BIND(str(?pathway_label_with_lang) as ?pathway_label)
+	}
+	
+} GROUP BY ?pathway ?genes_count ?pathway_label
+ORDER BY DESC(?ratio)

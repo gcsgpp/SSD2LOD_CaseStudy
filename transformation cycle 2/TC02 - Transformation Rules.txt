@@ -1,0 +1,99 @@
+config_element {
+	"default_baseIRI" = "http://example.org/onto/individual/",
+	"export_syntax" = "N-Triples",
+	"namespace" = "uniprot" refers_to "http://purl.uniprot.org/core/"
+}
+
+row_based_rule CNSOverKidney [ "" /DefaultValue("CNSOverKidney") is_equivalent_to "Gene expression comparison"]{
+	links_to upRegulatedKidney using "identified gene",
+	links_to downRegulatedKidney using "identified gene",
+	links_to "" /DefaultValue("CNSOverKidney") using "label"
+}
+
+row_based_rule upRegulatedKidney ["" /COL("gene_id", "Processed SSD - CNSOverKidney.txt") /; "" /DefaultValue("CNSOverKidney") /CE(ConditionUpRegulatedCNSOverKidney) is_equivalent_to "uniprot:Gene"]{
+	links_to "" /COL("gene_name", "Processed SSD - CNSOverKidney.txt") using "label",
+	links_to "" /COL("fdr", "Processed SSD - CNSOverKidney.txt") /DT("double") using "fdr value",
+	links_to "" /COL("log2 Ratio", "Processed SSD - CNSOverKidney.txt") /DT("double") using "log 2 ratio value"
+}
+
+row_based_rule downRegulatedKidney ["" /COL("gene_id", "Processed SSD - CNSOverKidney.txt")  /; "" /DefaultValue("CNSOverKidney") /CE(ConditionDownRegulatedCNSOverKidney) is_equivalent_to "uniprot:Gene"]{
+	links_to "" /COL("gene_name", "Processed SSD - CNSOverKidney.txt") using "label",
+	links_to "" /COL("fdr", "Processed SSD - CNSOverKidney.txt") /DT("double") using "fdr value",
+	links_to "" /COL("log2 Ratio", "Processed SSD - CNSOverKidney.txt") /DT("double") using "log 2 ratio value"
+}
+
+condition_element ConditionUpRegulatedCNSOverKidney{
+	"" /COL("fdr", "Processed SSD - CNSOverKidney.txt") <= "0.05",
+	"" /COL("log2 Ratio", "Processed SSD - CNSOverKidney.txt") >= "1"
+}
+
+condition_element ConditionDownRegulatedCNSOverKidney{
+	"" /COL("fdr", "Processed SSD - CNSOverKidney.txt") <= "0.05",
+	"" /COL("log2 Ratio", "Processed SSD - CNSOverKidney.txt") <= "-1"
+}
+
+
+
+
+
+row_based_rule CNSOverLiver [ "" /DefaultValue("CNSOverLiver") is_equivalent_to "Gene expression comparison"]{
+	links_to upRegulatedLiver using "identified gene",
+	links_to downRegulatedLiver using "identified gene",
+	links_to "" /DefaultValue("CNSOverLiver") using "label"
+}
+
+
+row_based_rule upRegulatedLiver ["" /COL("gene_id", "Processed SSD - CNSOverLiver.txt") /; "" /DefaultValue("CNSOverLiver") /CE(ConditionUpRegulatedCNSOverLiver) is_equivalent_to "uniprot:Gene"]{
+	links_to "" /COL("gene_name", "Processed SSD - CNSOverLiver.txt") using "label",
+	links_to "" /COL("fdr", "Processed SSD - CNSOverLiver.txt") /DT("double") using "fdr value",
+	links_to "" /COL("log2 Ratio", "Processed SSD - CNSOverLiver.txt") /DT("double") using "log 2 ratio value"
+}
+
+row_based_rule downRegulatedLiver ["" /COL("gene_id", "Processed SSD - CNSOverLiver.txt") /; "" /DefaultValue("CNSOverLiver") /CE(ConditionDownRegulatedCNSOverLiver) is_equivalent_to "uniprot:Gene"]{
+	links_to "" /COL("gene_name", "Processed SSD - CNSOverLiver.txt") using "label",
+	links_to "" /COL("fdr", "Processed SSD - CNSOverLiver.txt") /DT("double") using "fdr value",
+	links_to "" /COL("log2 Ratio", "Processed SSD - CNSOverLiver.txt") /DT("double") using "log 2 ratio value"
+}
+
+condition_element ConditionUpRegulatedCNSOverLiver{
+	"" /COL("fdr", "Processed SSD - CNSOverLiver.txt") <= "0.05",
+	"" /COL("log2 Ratio", "Processed SSD - CNSOverLiver.txt") >= "1"
+}
+
+condition_element ConditionDownRegulatedCNSOverLiver{
+	"" /COL("fdr", "Processed SSD - CNSOverLiver.txt") <= "0.05",
+	"" /COL("log2 Ratio", "Processed SSD - CNSOverLiver.txt") <= "-1"
+}
+
+
+
+
+
+
+row_based_rule CNSOverLung [ "" /DefaultValue("CNSOverLung") is_equivalent_to "Gene expression comparison"]{
+	links_to upRegulatedLung using "identified gene",
+	links_to downRegulatedLung using "identified gene",
+	links_to "" /DefaultValue("CNSOverLung") using "label"
+}
+
+row_based_rule upRegulatedLung ["" /COL("gene_id", "Processed SSD - CNSOverLung.txt") /; "" /DefaultValue("CNSOverLung") /CE(ConditionUpRegulatedCNSOverLung) is_equivalent_to "uniprot:Gene"]{
+	links_to "" /COL("gene_name", "Processed SSD - CNSOverLung.txt") using "label",
+	links_to "" /COL("fdr", "Processed SSD - CNSOverLung.txt") /DT("double") using "fdr value",
+	links_to "" /COL("log2 Ratio", "Processed SSD - CNSOverLung.txt") /DT("double") using "log 2 ratio value"
+}
+
+row_based_rule downRegulatedLung ["" /COL("gene_id", "Processed SSD - CNSOverLung.txt") /; "" /DefaultValue("CNSOverLung") /CE(ConditionDownRegulatedCNSOverLung) is_equivalent_to "uniprot:Gene"]{
+	links_to "" /COL("gene_name", "Processed SSD - CNSOverLung.txt") using "label",
+	links_to "" /COL("fdr", "Processed SSD - CNSOverLung.txt") /DT("double") using "fdr value",
+	links_to "" /COL("log2 Ratio", "Processed SSD - CNSOverLung.txt") /DT("double") using "log 2 ratio value"
+}
+
+condition_element ConditionUpRegulatedCNSOverLung{
+	"" /COL("fdr", "Processed SSD - CNSOverLung.txt") <= "0.05",
+	"" /COL("log2 Ratio", "Processed SSD - CNSOverLung.txt") >= "1"
+}
+
+condition_element ConditionDownRegulatedCNSOverLung{
+	"" /COL("fdr", "Processed SSD - CNSOverLung.txt") <= "0.05",
+	"" /COL("log2 Ratio", "Processed SSD - CNSOverLung.txt") <= "-1"
+}

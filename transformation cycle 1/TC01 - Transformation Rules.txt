@@ -1,0 +1,21 @@
+config_element {
+	"default_baseIRI" = "http://example.org/onto/individual/",
+	"export_syntax" = "N-Triples",
+	"namespace" = "obi" refers_to "http://purl.obolibrary.org/obo/OBI"
+}
+
+column_based_rule investigation [ "Comment[ArrayExpressAccession]" /BASEIRI("https://www.ebi.ac.uk/arrayexpress/experiments/", "ebi-ae") is_equivalent_to "obi:investigation"]{
+	links_to "Person First Name" /; "Person Last Name" using "Contributor",
+	links_to "Comment[AEExperimentType]" using "experiment data type",
+	links_to "Protocol Hardware" using "measurement device",
+	links_to organismTransformation using "has participant"
+}
+
+row_based_rule organismTransformation [ "Characteristics[organism]" is_equivalent_to "obi:organism"]{
+	links_to "Characteristics[organism]" using "label",
+	links_to sampleTransformation using "has sample",
+}
+
+row_based_rule sampleTransformation ["Source Name" is_equivalent_to "obi:sample from organism"]{
+	links_to "Characteristics[organism part]" using "organism part"
+}

@@ -1,0 +1,53 @@
+<http://dcm.ffclrp.usp.br/lssb/onto/individual/Sample_15> <http://dcm.ffclrp.usp.br/lssb/onto/exp5412#organism_part> "kidney" .
+<http://dcm.ffclrp.usp.br/lssb/onto/individual/Sample_15> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.obolibrary.org/obo/OBI_0000671> .
+<http://dcm.ffclrp.usp.br/lssb/onto/individual/Sample_9> <http://dcm.ffclrp.usp.br/lssb/onto/exp5412#organism_part> "lung" .
+<http://dcm.ffclrp.usp.br/lssb/onto/individual/Sample_9> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.obolibrary.org/obo/OBI_0000671> .
+<http://dcm.ffclrp.usp.br/lssb/onto/individual/Sample_2> <http://dcm.ffclrp.usp.br/lssb/onto/exp5412#organism_part> "central nervous system" .
+<http://dcm.ffclrp.usp.br/lssb/onto/individual/Sample_2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.obolibrary.org/obo/OBI_0000671> .
+<http://dcm.ffclrp.usp.br/lssb/onto/individual/Sample_13> <http://dcm.ffclrp.usp.br/lssb/onto/exp5412#organism_part> "kidney" .
+<http://dcm.ffclrp.usp.br/lssb/onto/individual/Sample_13> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.obolibrary.org/obo/OBI_0000671> .
+<http://dcm.ffclrp.usp.br/lssb/onto/individual/Sample_7> <http://dcm.ffclrp.usp.br/lssb/onto/exp5412#organism_part> "lung" .
+<http://dcm.ffclrp.usp.br/lssb/onto/individual/Sample_7> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.obolibrary.org/obo/OBI_0000671> .
+<http://dcm.ffclrp.usp.br/lssb/onto/individual/Sample_11> <http://dcm.ffclrp.usp.br/lssb/onto/exp5412#organism_part> "liver" .
+<http://dcm.ffclrp.usp.br/lssb/onto/individual/Sample_11> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.obolibrary.org/obo/OBI_0000671> .
+<http://dcm.ffclrp.usp.br/lssb/onto/individual/Sample_5> <http://dcm.ffclrp.usp.br/lssb/onto/exp5412#organism_part> "spleen" .
+<http://dcm.ffclrp.usp.br/lssb/onto/individual/Sample_5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.obolibrary.org/obo/OBI_0000671> .
+<http://dcm.ffclrp.usp.br/lssb/onto/individual/Sample_3> <http://dcm.ffclrp.usp.br/lssb/onto/exp5412#organism_part> "central nervous system" .
+<http://dcm.ffclrp.usp.br/lssb/onto/individual/Sample_3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.obolibrary.org/obo/OBI_0000671> .
+<https://www.ebi.ac.uk/arrayexpress/experiments/E-MTAB-5412> <http://dcm.ffclrp.usp.br/lssb/onto/exp5412#measurement_device> "BD FACS Aria III" .
+<https://www.ebi.ac.uk/arrayexpress/experiments/E-MTAB-5412> <http://dcm.ffclrp.usp.br/lssb/onto/exp5412#measurement_device> "Illumina HiSeq 4000" .
+<https://www.ebi.ac.uk/arrayexpress/experiments/E-MTAB-5412> <http://purl.obolibrary.org/obo/RO_0000057> <http://dcm.ffclrp.usp.br/lssb/onto/individual/Mus_musculus> .
+<https://www.ebi.ac.uk/arrayexpress/experiments/E-MTAB-5412> <http://dcm.ffclrp.usp.br/lssb/onto/exp5412#experiment_data_type> "RNA-seq of coding RNA" .
+<https://www.ebi.ac.uk/arrayexpress/experiments/E-MTAB-5412> <http://purl.org/dc/elements/1.1/contributor> "Sabine Spath" .
+<https://www.ebi.ac.uk/arrayexpress/experiments/E-MTAB-5412> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.obolibrary.org/obo/OBI_0000066> .
+<http://dcm.ffclrp.usp.br/lssb/onto/individual/Sample_14> <http://dcm.ffclrp.usp.br/lssb/onto/exp5412#organism_part> "kidney" .
+<http://dcm.ffclrp.usp.br/lssb/onto/individual/Sample_14> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.obolibrary.org/obo/OBI_0000671> .
+<http://dcm.ffclrp.usp.br/lssb/onto/individual/Sample_8> <http://dcm.ffclrp.usp.br/lssb/onto/exp5412#organism_part> "lung" .
+<http://dcm.ffclrp.usp.br/lssb/onto/individual/Sample_8> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.obolibrary.org/obo/OBI_0000671> .
+<http://dcm.ffclrp.usp.br/lssb/onto/individual/Mus_musculus> <http://dcm.ffclrp.usp.br/lssb/onto/exp5412#has_sample> <http://dcm.ffclrp.usp.br/lssb/onto/individual/Sample_1> .
+<http://dcm.ffclrp.usp.br/lssb/onto/individual/Mus_musculus> <http://dcm.ffclrp.usp.br/lssb/onto/exp5412#has_sample> <http://dcm.ffclrp.usp.br/lssb/onto/individual/Sample_12> .
+<http://dcm.ffclrp.usp.br/lssb/onto/individual/Mus_musculus> <http://dcm.ffclrp.usp.br/lssb/onto/exp5412#has_sample> <http://dcm.ffclrp.usp.br/lssb/onto/individual/Sample_11> .
+<http://dcm.ffclrp.usp.br/lssb/onto/individual/Mus_musculus> <http://dcm.ffclrp.usp.br/lssb/onto/exp5412#has_sample> <http://dcm.ffclrp.usp.br/lssb/onto/individual/Sample_8> .
+<http://dcm.ffclrp.usp.br/lssb/onto/individual/Mus_musculus> <http://www.w3.org/2000/01/rdf-schema#label> "Mus musculus" .
+<http://dcm.ffclrp.usp.br/lssb/onto/individual/Mus_musculus> <http://dcm.ffclrp.usp.br/lssb/onto/exp5412#has_sample> <http://dcm.ffclrp.usp.br/lssb/onto/individual/Sample_10> .
+<http://dcm.ffclrp.usp.br/lssb/onto/individual/Mus_musculus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.obolibrary.org/obo/OBI_0100026> .
+<http://dcm.ffclrp.usp.br/lssb/onto/individual/Mus_musculus> <http://dcm.ffclrp.usp.br/lssb/onto/exp5412#has_sample> <http://dcm.ffclrp.usp.br/lssb/onto/individual/Sample_9> .
+<http://dcm.ffclrp.usp.br/lssb/onto/individual/Mus_musculus> <http://dcm.ffclrp.usp.br/lssb/onto/exp5412#has_sample> <http://dcm.ffclrp.usp.br/lssb/onto/individual/Sample_15> .
+<http://dcm.ffclrp.usp.br/lssb/onto/individual/Mus_musculus> <http://dcm.ffclrp.usp.br/lssb/onto/exp5412#has_sample> <http://dcm.ffclrp.usp.br/lssb/onto/individual/Sample_14> .
+<http://dcm.ffclrp.usp.br/lssb/onto/individual/Mus_musculus> <http://dcm.ffclrp.usp.br/lssb/onto/exp5412#has_sample> <http://dcm.ffclrp.usp.br/lssb/onto/individual/Sample_7> .
+<http://dcm.ffclrp.usp.br/lssb/onto/individual/Mus_musculus> <http://dcm.ffclrp.usp.br/lssb/onto/exp5412#has_sample> <http://dcm.ffclrp.usp.br/lssb/onto/individual/Sample_13> .
+<http://dcm.ffclrp.usp.br/lssb/onto/individual/Mus_musculus> <http://dcm.ffclrp.usp.br/lssb/onto/exp5412#has_sample> <http://dcm.ffclrp.usp.br/lssb/onto/individual/Sample_6> .
+<http://dcm.ffclrp.usp.br/lssb/onto/individual/Mus_musculus> <http://dcm.ffclrp.usp.br/lssb/onto/exp5412#has_sample> <http://dcm.ffclrp.usp.br/lssb/onto/individual/Sample_3> .
+<http://dcm.ffclrp.usp.br/lssb/onto/individual/Mus_musculus> <http://dcm.ffclrp.usp.br/lssb/onto/exp5412#has_sample> <http://dcm.ffclrp.usp.br/lssb/onto/individual/Sample_5> .
+<http://dcm.ffclrp.usp.br/lssb/onto/individual/Mus_musculus> <http://dcm.ffclrp.usp.br/lssb/onto/exp5412#has_sample> <http://dcm.ffclrp.usp.br/lssb/onto/individual/Sample_4> .
+<http://dcm.ffclrp.usp.br/lssb/onto/individual/Mus_musculus> <http://dcm.ffclrp.usp.br/lssb/onto/exp5412#has_sample> <http://dcm.ffclrp.usp.br/lssb/onto/individual/Sample_2> .
+<http://dcm.ffclrp.usp.br/lssb/onto/individual/Sample_12> <http://dcm.ffclrp.usp.br/lssb/onto/exp5412#organism_part> "liver" .
+<http://dcm.ffclrp.usp.br/lssb/onto/individual/Sample_12> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.obolibrary.org/obo/OBI_0000671> .
+<http://dcm.ffclrp.usp.br/lssb/onto/individual/Sample_1> <http://dcm.ffclrp.usp.br/lssb/onto/exp5412#organism_part> "central nervous system" .
+<http://dcm.ffclrp.usp.br/lssb/onto/individual/Sample_1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.obolibrary.org/obo/OBI_0000671> .
+<http://dcm.ffclrp.usp.br/lssb/onto/individual/Sample_6> <http://dcm.ffclrp.usp.br/lssb/onto/exp5412#organism_part> "spleen" .
+<http://dcm.ffclrp.usp.br/lssb/onto/individual/Sample_6> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.obolibrary.org/obo/OBI_0000671> .
+<http://dcm.ffclrp.usp.br/lssb/onto/individual/Sample_4> <http://dcm.ffclrp.usp.br/lssb/onto/exp5412#organism_part> "central nervous system" .
+<http://dcm.ffclrp.usp.br/lssb/onto/individual/Sample_4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.obolibrary.org/obo/OBI_0000671> .
+<http://dcm.ffclrp.usp.br/lssb/onto/individual/Sample_10> <http://dcm.ffclrp.usp.br/lssb/onto/exp5412#organism_part> "liver" .
+<http://dcm.ffclrp.usp.br/lssb/onto/individual/Sample_10> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.obolibrary.org/obo/OBI_0000671> .

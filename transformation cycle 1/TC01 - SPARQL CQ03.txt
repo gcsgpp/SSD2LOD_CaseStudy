@@ -1,0 +1,7 @@
+PREFIX onto: <http://example.org/onto/exp5412#>
+
+SELECT DISTINCT ?platform WHERE {
+	
+	?investigation onto:measurement_device ?platform
+	
+}

@@ -1,0 +1,7 @@
+Competency Questions (CQ)
+
+CQ 1 - What are the names of the researchers involved in the experiment?
+CQ 2 - Which is the gene expression data type involved?
+CQ 3 - Which was the platform used to extract the data?
+CQ 4 - Which organisms are involved in the experiment?
+CQ 5 - Which type of samples were used in the experiment?

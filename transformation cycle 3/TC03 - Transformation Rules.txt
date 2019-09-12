@@ -1,0 +1,28 @@
+config_element {
+	"default_baseIRI" = "http://example.org/onto/individual/",
+	"export_syntax" = "N-Triples",
+	"namespace" = "ro" refers_to "http://purl.obolibrary.org/obo/RO",
+	"namespace" = "uniprot" refers_to "http://purl.uniprot.org/core/"
+}
+
+row_based_rule differentiallyExpressedGene ["gene_id.Set1" is_equivalent_to "uniprot:Gene"]{
+	links_to "gene_name.Set1" using "label",
+	links_to "gene_name.Set1" /SE(searchPathway, ?pathway) /NODE("Pathway") using "ro:involved in"
+}
+
+search_element searchPathway["http://sparql.wikipathways.org/"]{$
+	PREFIX rdfs:    	<http://www.w3.org/2000/01/rdf-schema#>
+	PREFIX wp:			<http://vocabularies.wikipathways.org/wp#>
+	PREFIX dcterms: 	<http://purl.org/dc/terms/>
+	SELECT DISTINCT ?pathway WHERE{
+		?geneProduct a wp:GeneProduct .
+		?geneProduct rdfs:label ?label_raw .
+		?geneProduct dcterms:isPartOf ?pathway .
+		?pathway a wp:Pathway .
+		
+		FILTER regex(ucase(str(?label_raw)), ucase(?tsvData)).
+		
+		?pathway wp:organismName ?organism .
+		FILTER regex(ucase(str(?organism )), ucase("mus musculus")).
+	}
+$}

@@ -1,0 +1,7 @@
+PREFIX onto: <http://example.org/onto/exp5412#>
+
+SELECT DISTINCT ?data_type WHERE {
+	
+	?investigation onto:experiment_data_type ?data_type
+	
+}

@@ -1,0 +1,8 @@
+Competency Questions (CQ)
+
+CQ 6 - Which genes are upregulated in CNS over kidney?
+CQ 7 - Which genes are downregulated in CNS over kidney?
+CQ 8 - Which genes are upregulated in CNS over liver?
+CQ 9 - Which genes are downregulated in CNS over liver?
+CQ 10 - Which genes are upregulated in CNS over lung?
+CQ 11 - Which genes are downregulated in CNS over lung?

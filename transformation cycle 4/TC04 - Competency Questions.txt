@@ -1,0 +1,3 @@
+Competency Questions (CQ)
+
+CQ 13 - Which are the main biological processes that differentially expressed genes in CNS versus lung, liver and kidney participate in?

@@ -1,0 +1,15 @@
+PREFIX onto: <http://example.org/onto/exp5412#>
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX uniprot:    <http://purl.uniprot.org/core/>
+
+SELECT DISTINCT ?genes_iri (?genes as ?downRegulated) WHERE {
+
+	?genes_iri a uniprot:Gene.
+	?genes_iri rdfs:label ?genes .
+	?genes_iri onto:log2ratio_value ?log2 .
+	
+	?comparison onto:identified_gene ?genes_iri .
+	?comparison rdfs:label "CNSOverLung" .
+	
+	FILTER (?log2 <= -1) .
+}

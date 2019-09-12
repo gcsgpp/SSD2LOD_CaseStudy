@@ -1,0 +1,158 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://example.org/onto/exp5412#"
+     xml:base="http://example.org/onto/exp5412"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
+     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:onto="http://example.org/onto/exp5412#"
+     xmlns:cito="http://purl.org/spar/cito/"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:oboInOwl1="ttp://www.geneontology.org/formats/oboInOwl#"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:subsets="http://purl.obolibrary.org/obo/ro/subsets#">
+    <owl:Ontology rdf:about="http://example.org/onto/exp5412">
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2019-02-02/ro.owl"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/obi/2017-11-07/obi.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.org/onto/exp5412#has_sample -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/onto/exp5412#has_sample">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has sample</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/onto/exp5412#identified_gene -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/onto/exp5412#identified_gene">
+        <rdfs:label>identified gene</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002331 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002331">
+        <rdfs:label xml:lang="en">involved in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.org/onto/exp5412#experiment_data_type -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/onto/exp5412#experiment_data_type">
+        <rdfs:label>experiment data type</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/onto/exp5412#fdr_value -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/onto/exp5412#fdr_value">
+        <rdfs:label>fdr value</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/onto/exp5412#has_p-value -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/onto/exp5412#has_p-value">
+        <rdfs:label>has p-value</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/onto/exp5412#log2ratio_value -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/onto/exp5412#log2ratio_value">
+        <rdfs:label>log 2 ratio value</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/onto/exp5412#measurement_device -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/onto/exp5412#measurement_device">
+        <rdfs:label>measurement device</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/onto/exp5412#organism_part -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/onto/exp5412#organism_part">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:label>organism part</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.org/onto/exp5412#gene_expression_comparison -->
+
+    <owl:Class rdf:about="http://example.org/onto/exp5412#gene_expression_comparison">
+        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Gene expression comparison</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCIT_C54214 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C54214">
+        <rdfs:label>Pathway</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.uniprot.org/core/Gene -->
+
+    <owl:Class rdf:about="http://purl.uniprot.org/core/Gene">
+        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Gene</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

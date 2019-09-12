@@ -1,0 +1,51 @@
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX uniprot: <http://purl.uniprot.org/core/>
+PREFIX up: <http://purl.uniprot.org/core/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+
+SELECT DISTINCT ?biological_process ?bp_iri ?expr_genes (count(distinct ?protein) as ?total_genes) ((?expr_genes / ?total_genes) as ?ratio) WHERE {
+
+	{ 
+		SELECT DISTINCT ?bp_iri (COUNT(?bp_iri) as ?expr_genes) WHERE {
+			?genes_iri a uniprot:Gene .
+			?genes_iri obo:RO_0000056 ?bp_iri .
+
+			filter (?bp_iri not IN (<http://purl.obolibrary.org/obo/GO_0008150>,
+									<http://purl.obolibrary.org/obo/GO_0006810>,
+									<http://purl.obolibrary.org/obo/GO_0008152>,
+									<http://purl.obolibrary.org/obo/GO_0009058>,
+									<http://purl.obolibrary.org/obo/GO_0050896>,
+									<http://purl.obolibrary.org/obo/GO_0009607>,
+									<http://purl.obolibrary.org/obo/GO_0006139>,
+									<http://purl.obolibrary.org/obo/GO_0006807>,
+									<http://purl.obolibrary.org/obo/GO_0055085>,
+									<http://purl.obolibrary.org/obo/GO_0019222>,
+									<http://purl.obolibrary.org/obo/GO_0002376>,
+									<http://purl.obolibrary.org/obo/GO_0006811>,
+									<http://purl.obolibrary.org/obo/GO_0006725>,
+									<http://purl.obolibrary.org/obo/GO_0006796>,
+									<http://purl.obolibrary.org/obo/GO_0051234>,
+									<http://purl.obolibrary.org/obo/GO_0007275>,
+									<http://purl.obolibrary.org/obo/GO_0030154>,
+									<http://purl.obolibrary.org/obo/GO_0050790>,
+									<http://purl.obolibrary.org/obo/GO_0044237>,
+									<http://purl.obolibrary.org/obo/GO_0050794>,
+									<http://purl.obolibrary.org/obo/GO_0032502>,
+									<http://purl.obolibrary.org/obo/GO_1901360>
+									)
+					)
+		
+		} GROUP BY ?bp_iri ORDER BY DESC(?expr_genes)
+		
+	}	
+		
+	SERVICE silent <https://sparql.uniprot.org/sparql/> {
+		?bp_iri rdfs:label ?biological_process .
+		?sub_bp (rdfs:subClassOf|owl:someValuesFrom)* ?bp_iri .
+		?protein up:classifiedWith ?sub_bp.
+		?protein up:organism <http://purl.uniprot.org/taxonomy/10090> .
+	}
+	
+} GROUP BY ?biological_process ?bp_iri ?expr_genes ?total_genes
+ORDER BY DESC(?ratio)

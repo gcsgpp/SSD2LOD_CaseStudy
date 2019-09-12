@@ -1,0 +1,6 @@
+PREFIX dcterms: <http://purl.org/dc/elements/1.1/>
+SELECT DISTINCT ?researcher_name WHERE {
+	
+	?investigation dcterms:contributor ?researcher_name .
+
+}

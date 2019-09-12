@@ -1,0 +1,9 @@
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX onto: <http://example.org/onto/exp5412#>
+
+SELECT DISTINCT ?sample_name WHERE {
+	
+	?sample a obo:OBI_0000671 .
+	?sample onto:organism_part ?sample_name
+	
+}

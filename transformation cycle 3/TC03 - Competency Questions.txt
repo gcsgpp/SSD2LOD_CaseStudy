@@ -1,0 +1,3 @@
+Competency Questions (CQ)
+
+CQ 12 - Which are the main pathways that differentially expressed genes in CNS versus lung, liver and kidney are associated to?

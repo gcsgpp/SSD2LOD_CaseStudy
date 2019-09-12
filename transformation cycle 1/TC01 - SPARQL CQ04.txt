@@ -1,0 +1,9 @@
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?organism_name WHERE {
+	
+	?organism a obo:OBI_0100026 .
+	?organism rdfs:label ?organism_name
+	
+}
