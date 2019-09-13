@@ -1,5 +1,5 @@
 config_element {
-	"default_baseIRI" = "http://dcm.ffclrp.usp.br/lssb/onto/individual/",
+	"default_baseIRI" = "http://example.org/onto/individual/",
 	"export_syntax" = "N-Triples",
 	"namespace" = "ro" refers_to "http://purl.obolibrary.org/obo/RO",
 	"namespace" = "uniprot" refers_to "http://purl.uniprot.org/core/",
