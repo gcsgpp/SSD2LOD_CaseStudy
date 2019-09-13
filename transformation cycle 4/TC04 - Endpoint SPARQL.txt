@@ -1,1 +1,0 @@
-http://kode.ffclrp.usp.br:8081/fuseki/78fd7580-9461-4839-815f-47537b292c07/
